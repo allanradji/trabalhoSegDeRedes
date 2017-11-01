@@ -3,7 +3,7 @@
 #Questão 1
 
 regras=$(iptables -L)
-if [ -z $regras ]; then
+if [ -z "$regras" ]; then
 	iptables -L
 else
 	iptables -P INPUT ACCEPT
