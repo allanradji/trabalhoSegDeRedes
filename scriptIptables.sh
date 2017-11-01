@@ -4,7 +4,7 @@
 
 regras=$(iptables -L)
 if [ -z "$regras" ]; then
-	iptables -L
+	iptables -F
 else
 	iptables -P INPUT ACCEPT
 	iptables -P OUTPUT ACCEPT
