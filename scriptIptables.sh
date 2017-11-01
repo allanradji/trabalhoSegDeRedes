@@ -2,9 +2,9 @@
 
 #Questão 1
 
-regras=iptables -L
+regras=$(iptables -L)
 if [ $regras != '' ]; then
-        iptables -L
+	iptables -L
 else
 	iptables -P INPUT ACCEPT
 	iptables -P OUTPUT ACCEPT
